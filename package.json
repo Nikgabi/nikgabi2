@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Christos",
-  "license": "MIT",
+  "author": "",
+  "license": "",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
