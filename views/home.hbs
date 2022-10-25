@@ -1,0 +1,39 @@
+<form action="/books" method="post">
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <h2 class="text-center">Εισάγετε τα στοιχεία σας</h2>
+            <br>
+            <div class="form-group">
+                <div>
+                    <input type="text" class="form-control {{#if message.username}} is-invalid {{/if}}"
+                    value="{{username}}" name="username" placeholder="Όνομα χρήστη" required="required" autofocus>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div>
+                    <input type="password" class="form-control {{#if message.password}} is-invalid {{/if}}" value="{{password}}" name="password" 
+                    placeholder="password" required="required" autofocus>
+                
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary login-btn btn-lock">Είσοδος</button>
+            </div>
+        </div>
+        <br>
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <a type="submit" class="btn btn-primary login-btn btn-lock" href="/register">Εγγραφή</a>
+            </div>
+        </div>
+
+    </div>
+
+</form>

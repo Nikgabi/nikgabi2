@@ -1,0 +1,41 @@
+<form action="/doregister" method="post">
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <h2 class="text-center">Εγγραφή Χρήστη</h2>
+            <br>
+            <div class="form-group">
+                <div>
+                    <input type="text" class="form-control {{#if message.username}} is-invalid {{/if}}" value="{{username}}" name="username" 
+                    placeholder="Όνομα χρήστη" required="required" autofocus>
+                
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div>
+                    <input type="password" class="form-control {{#if message.password}} is-invalid {{/if}}" value="{{password}}" name="password" 
+                    placeholder="Δώσε password" required="required" autofocus>
+                
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div>
+                    <input type="password" class="form-control" value="" name="password2" 
+                    placeholder="Ξαναδώσε το password" required="required" autofocus>
+                
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary login-btn btn-lock">Εγγραφή</button>
+            </div>
+        </div>
+
+    </div>
+
+</form>

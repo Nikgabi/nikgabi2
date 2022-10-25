@@ -1,0 +1,16 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="/logo.jpg" alt="book logo">&nbsp;&nbsp;
+        <a class="navbar-brand" {{#unless username}} href="/" {{/unless}}> <h1> myBooks {{#if username}} - Χρήστης: {{username}} {{/if}}</h1></a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/books">Βιβλία</a>
+            </li>
+            {{#if username}}
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Αποσύνδεση</a>
+            </li>
+            {{/if}}
+        </ul>
+    </nav>
+</div>
