@@ -1,4 +1,4 @@
-import * as BookList from './models/book_List_model.mjs'
+import * as BookList from '/models/book_List_model.mjs'
 
 const doLogin = async (req,res,next)=>{
     const user= await BookList.login(req.body.username , req.body.password)

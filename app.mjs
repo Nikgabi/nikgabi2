@@ -22,32 +22,25 @@ const myBooksSession = session({
 
 const app = express()
 
-// check sid
 app.use(myBooksSession)
 
-// load static files
 app.use(express.static("public"))
 
-// read variables send with POST
 app.use(express.urlencoded({ extended: false }))
 
-// Use .hbs as extention for handlebars files
 app.engine('hbs', engine({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
 
-// Use router for routing
 app.use("/", router)
 
-// Redirect to home
 app.use((req, res) => {
   res.redirect('/')  
 })
 
-// Error handler
 app.use((err, req, res, next) => {
   console.log(err.message)
   res.render('error', {message: err.message})
 })
-// Start app in listening mde on port PORT
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log("Η εφαρμογή ξεκίνησε στην πόρτα: " + PORT)) 

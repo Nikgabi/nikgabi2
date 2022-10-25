@@ -1,8 +1,8 @@
 import express from 'express'
-import * as BookList  from './models/booklist_model.mjs'
+import * as BookList  from './models/book_List_model.mjs'
 import * as Validator from './validator/validation.mjs'
 import * as UserController from './controler/user_controler.mjs'
-import * as BookControler from './controler/book_controler'
+import * as BookControler from './controler/book_controler.mjs'
 
 const router = express.Router()
 
@@ -42,11 +42,11 @@ router.post(
   BookControler.addBook
  )
 
- router.delete('/deleteBook',
- UserController.checkIfAuthenticated,
- Validator.validateLogin ,
- UserController.doLogin, 
- BookControler.deleteBook , res.redirect('/books'))
+ //router.delete('/deleteBook',
+ //UserController.checkIfAuthenticated,
+ //Validator.validateLogin ,
+ //UserController.doLogin, 
+ //BookControler.deleteBook , res.redirect('/books'))
 
 router.get('/logout',
   UserController.checkIfAuthenticated,

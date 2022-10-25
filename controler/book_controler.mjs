@@ -1,4 +1,4 @@
-import * as BookList from './models/book_List_model.mjs'
+import * as BookList from '/models/book_List_model.mjs'
 
 const showBookList = async function showBookList(req, res, next) {
     try {
